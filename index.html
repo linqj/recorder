@@ -11,30 +11,30 @@
 </head>
 
 <body>
-  <div class="goto">点击进入官微</div>
-  <audio controls="controls"></audio>
-  <div class="recorderControl">录制</div>
+  <div class="goto" style="line-height:100px;">点击进入官微</div>
+<!--   <audio controls="controls"></audio>
+  <div class="recorderControl">录制</div> -->
   <script>
    let gotoElement= document.getElementsByClassName("goto")[0];
    gotoElement.onclick = function(){
         location.href="https://hengqinlife-uat.e-hqins.com/lovefrom"
     };
-    var promise = navigator.mediaDevices.getUserMedia({
-      audio: true
-    });
-    promise.then(function (stream) {
-      alert(stream)
+//     var promise = navigator.mediaDevices.getUserMedia({
+//       audio: true
+//     });
+//     promise.then(function (stream) {
+//       alert(stream)
 
-      recorder.ondataavailable = function () {
-        //收集媒体设备 获得到的 可以使用的 媒体流数据
-        console.log(event.data)
-      }
-    });
+//       recorder.ondataavailable = function () {
+//         //收集媒体设备 获得到的 可以使用的 媒体流数据
+//         console.log(event.data)
+//       }
+//     });
 
-    promise.catch(function (error) {
-      alert(error.name)
-      alert(error.message)
-    });
+//     promise.catch(function (error) {
+//       alert(error.name)
+//       alert(error.message)
+//     });
   </script>
 
 
